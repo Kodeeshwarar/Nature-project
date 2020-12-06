@@ -1,0 +1,55 @@
+.compostion {
+    position: relative !important;
+
+    &_photo{
+        position:absolute;
+        width: 50%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    transition: all .2s;
+    outline-offset: 2rem;
+    transform: skewX(11deg);
+    @include respond(tab-port){
+       position: relative;
+       float: left;
+       width: 33.33333;
+       box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.4);
+        }
+
+        &--p1{
+            left: 10px;
+            top: -2rem;
+            @include respond(tab-port){
+                top:2rem;
+                left: -7rem;
+            }
+        }
+        &--p2{
+            right:1rem;
+            top:2rem;
+            @include respond(tab-port){
+                top:2rem;
+                left:4rem;
+            }
+        }
+        &--p3{
+            right:25% ;
+            top:10rem;
+            @include respond(tab-port){
+                top: -14rem;
+                left:10rem;
+                z-index: 10;
+            }
+        }
+        &:hover{
+            transform: scale(1.1);
+            box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+            z-index: 20;
+            outline:1.5rem solid $color-primary;
+
+        }
+    }
+    
+    }

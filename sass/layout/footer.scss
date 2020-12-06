@@ -1,0 +1,76 @@
+.footer{
+    background: $color-grey-dark;
+    padding: 20rem 0;
+    color:$color-grey-light-2;
+    position:relative;
+
+        @include clearfix;
+
+    &__picture{
+    height: 100%;
+
+    .img{
+        width: 15rem;
+        height: 15rem;
+        float: left;
+        shape-outside: circle(50% at 50% 50%);
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        -webkit-clip-path: circle(50% at 50% 50%);
+        position: relative;
+                        }
+            }
+
+&__about{
+    .about-us{
+        margin-left: 2rem;
+    }
+
+    &__details{
+        font-size: 1.8rem;
+        text-transform: capitalize;
+        letter-spacing:0.4rem;
+        letter-spacing:1.5;
+        margin-left: 18rem;
+       }
+
+}
+
+&__social-box{
+    ul{
+        margin-left: 20rem;
+
+       li {
+        font-size: 3rem;
+        display: inline-block;
+        background: linear-gradient(to right ,$color-primary-light,$color-primary-dark);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        letter-spacing: .5rem;
+        padding: .7rem;
+            margin-left: 1rem;
+            
+    
+    &:hover{
+        transform: skewY(3deg) skewX(13deg) scale(1.4);
+        text-shadow:.5em 1rem 2rem rgba($color-black,.2);
+        border: 3px solid white;
+        border-radius: 50%;
+             }
+         }
+    }  
+  }
+
+    &__center-box{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-36%,-50%);
+      display: block;
+        @include respond(phone){
+            width: 67%;
+        }
+       
+    }
+}
